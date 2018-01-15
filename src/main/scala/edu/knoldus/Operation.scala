@@ -14,7 +14,7 @@ class Operation {
     list match {
       case _ if result == 1 => list
       case _ if contain(list, result / 2) == false && result % 2 == 0 => innerCall((result / 2) :: list, result / 2)
-      case _ if contain(list, (3 * result + 1) / 2) == false && result % 2 == 1 => innerCall(((3 * result + 1) / 2) :: list, (3 * result + 1) / 2)
+      case _ if contain(list, (3 * result + 1)) == false && result % 2 == 1 => innerCall(((3 * result + 1)) :: list, (3 * result + 1))
       case _ => list
     }
   }
